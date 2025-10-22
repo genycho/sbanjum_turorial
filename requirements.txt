@@ -1,0 +1,12 @@
+requests>=2.25.1
+pytest
+pytest-mock
+pytest-html
+unittest-xml-reporting
+pytest-cov
+openpyxl
+python-dotenv
+fastapi>=0.74.1
+uvicorn>=0.21.1
+anyio>=3.6.2
+httpx>=0.24.1
