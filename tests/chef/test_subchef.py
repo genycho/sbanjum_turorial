@@ -34,3 +34,7 @@ def test_subchef_basic():
     assert result.hobak.taste == constants.TASTE_GOOD
     # assert result.myun.taste == constants.TASTE_GOOD
     assert result.yangpa.taste == constants.TASTE_GOOD
+
+def test_subchef_0inbun():
+    """ 테스트 목적 : 잘못된 cook_count(=0인분)로 요청했을 때 """
+    pytest.fail("Not yet implemented")

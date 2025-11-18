@@ -60,3 +60,6 @@ def test_mainchef_morethan10orders(main_chef):
         test_order.set_order(botong_count=1, goppagi_count=0)
     assert str(excinfo.value) == "요리 대기열이 꽉 찼습니다. 더 주문을 받을 수 없습니다."
     
+def test_mainchef_0inbun(main_chef):
+    """ 테스트 목적 : 0인분 주문 시 예외처리 확인 """
+    pytest.fail("Not yet implemented")

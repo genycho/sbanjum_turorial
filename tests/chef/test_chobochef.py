@@ -3,7 +3,7 @@
 """
 import pytest
 from employee.chef import ChoboChef
-# from ingredients.vegetables import Yangpa
+from ingredients.vegetables import Yangpa
 # from ingredients.vegetables import Gamja
 # from ingredients.vegetables import Hobak
 # from ingredients.noodles import Myun
@@ -35,6 +35,20 @@ def test_chobochef_basic():
     assert chobo_chef.gamja.taste == constants.TASTE_BAD
     assert chobo_chef.hobak.taste == constants.TASTE_BAD
     assert chobo_chef.yangpa.taste == constants.TASTE_BAD
+
+def test_chobochef_0inbun():
+    """ 테스트 목적 : 0인분에 대한 처리 테스트 """
+    test_cook_count = 0
+
+    chobo_chef = ChoboChef("테스트 초보 주방장")
+    with pytest.raises(Exception) as details:
+        chobo_chef.request_to_cook(cook_count=test_cook_count)
+    assert "" == details.value.args[0]
+
+@pytest.mark.skip(reason="pytest-mock 적용이 필요")
+def test_chobochef_rottenchasoe():
+    """ 테스트 목적 : 채소가 상해 있을 때 처리 확인 """
+    pytest.fail("Not yet implemented")
 
 
   

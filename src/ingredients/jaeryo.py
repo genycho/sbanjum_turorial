@@ -44,6 +44,7 @@ class Chaeso(Jaeryo):
     def cut(self, amount):
         self.set_amount(amount)
 
-    @abstractmethod
     def slice(self, size):
-        pass
+        self.sliced_size = size
+        # self.status == constants.JAERYO_STATUS_SLICED    #INJECTED. 실제 코드 결함 사례
+        self.status = constants.JAERYO_STATUS_SLICED

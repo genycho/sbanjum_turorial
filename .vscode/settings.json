@@ -1,6 +1,8 @@
 {
     "python.testing.pytestArgs": [
-        "tests"
+        "tests",
+        "--cov=./src", // 현재 프로젝트 루트 디렉토리에 대한 커버리지 측정
+        "--cov-report=xml", // coverage.xml 파일로 보고서 생성 (Coverage Gutters 등을 위함)
     ],
     "python.testing.unittestEnabled": false,
     "python.testing.pytestEnabled": true

@@ -7,11 +7,6 @@ class Yangpa(Chaeso):
     def __init__(self, amount):
         super().__init__("양파", amount)
 
-    def slice(self, size):
-        self.sliced_size = size
-        # self.status == constants.JAERYO_STATUS_SLICED    #INJECTED. 실제 코드 결함 사례
-        self.status = constants.JAERYO_STATUS_SLICED
-		
     def cook(self, cook_seconds):
         if cook_seconds <= 0:
             raise CookingException("0초 이상을 조리해 주세요.")
@@ -25,10 +20,6 @@ class Yangpa(Chaeso):
 class Gamja(Chaeso):
     def __init__(self, amount):
         super().__init__("감자", amount)
-    
-    def slice(self, size):
-        self.sliced_size = size
-        self.status = constants.JAERYO_STATUS_SLICED
 		
     def cook(self, cook_seconds):
         if cook_seconds <= 0:
@@ -43,10 +34,6 @@ class Hobak(Chaeso):
     def __init__(self, amount):
         super().__init__("호박", amount)
 
-    def slice(self, size):
-        self.sliced_size = size
-        self.status = constants.JAERYO_STATUS_SLICED
-		
     def cook(self, cook_seconds):
         if cook_seconds <= 0:
             raise CookingException("0초 이상을 조리해 주세요. ")
